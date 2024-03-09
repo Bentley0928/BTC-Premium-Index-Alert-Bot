@@ -6,8 +6,8 @@ from telegram import Bot
 from datetime import datetime, timezone, timedelta
 import requests
 import json
-BOT_TOKEN = '7061130337:AAESoxb3PTbqLnAcKcJzXjVAVJvn_NRaw6w'
-CHAT_ID = '429026641'
+BOT_TOKEN = ''
+CHAT_ID = ''
 bot = Bot(token=BOT_TOKEN)
 
 def send_telegram_message(message):
