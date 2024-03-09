@@ -50,7 +50,7 @@ def job():
 
 while True:
     current_time = datetime.now()
-    if current_time.second == 7:
+    if current_time.second == 10:
         job()
         time.sleep(59)
     else:
