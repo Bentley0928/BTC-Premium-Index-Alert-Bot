@@ -32,14 +32,14 @@ def fetch_premium_index():
         
         print(f"High Index: {high_index*100}%, Average of the selected Klines: {average_of_klines*100}%")
         if (high_index - average_of_klines) > 0.0003 :
-            send_telegram_message(f'Alert: High Index {high_index*100}% is 0.5 more than the average {average_of_klines*100}% of the selected Klines.')
+            send_telegram_message(f'Alert: High Index {high_index*100}% is 0.3 more than the average {average_of_klines*100}% of the selected Klines.')
         low_index = float(klines[-2][3])
         average_of_klines_low = sum(float(kline[3]) for kline in klines[-32:-2]) / 30
         
         print(f"Low Index: {low_index*100}%, Average of the selected Klines: {average_of_klines_low*100}%")
 
         if (low_index - average_of_klines_low) < -0.0003 :
-            send_telegram_message(f'Alert: Low Index {low_index*100}% is 0.5 less than the average {average_of_klines_low*100}% of the selected Klines.')
+            send_telegram_message(f'Alert: Low Index {low_index*100}% is 0.3 less than the average {average_of_klines_low*100}% of the selected Klines.')
     else:
         print(f"Failed to fetch data: Status code {response.status_code}")
 fetch_premium_index()
